@@ -47,21 +47,25 @@ Because all of the first *n* = 1000000000000 letters of the infinite string are 
 [UML](./Assets/Repeated%20String%202.pdf)
 
 ``` java script
+//Count the quantiy of complete strings in n
 const fullStringQty = Math.trunc(n / s.length);
 
+//Count how many "a" are in the first initial string
 let inFirstString = 0;
     if (s.match(/[a]/g) !== null) 
         inFirstString = s.match(/[a]/g).length;
-    
+
+//Create an ending string
 let lastString = s.substring(0 , n % fullStringQty);
     if (fullStringQty === 0 ) 
         lastString = s.substring(0 , n);
-    
+
+//Count how many "a" are in the ending string       
 let inLastString = 0; 
     if (lastString.match(/[a]/g) !== null && lastString.length > 0 ) 
         inLastString =  lastString.match(/[a]/g).length;
 
-    
+//Count quantity of "a" in s  
 const answer = inFirstString * fullStringQty + inLastString;
 return answer;
 
