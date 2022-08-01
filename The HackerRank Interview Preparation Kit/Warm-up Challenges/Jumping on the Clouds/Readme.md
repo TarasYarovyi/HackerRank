@@ -45,7 +45,7 @@ The player must avoid c[2] and c[5]. The game can be won with a minimum of 4 jum
     3
 
 ## Explanation 1:
-The only thundercloud to avoid is **c[4]** . The game can be won in **3** jumps:
+The only thundercloud to avoid is **c[4]** . The game can be won in **3** jumps:<br>
 
 
 ![o](Assets/jump2.png)
