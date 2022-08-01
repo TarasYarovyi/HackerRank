@@ -34,6 +34,7 @@ Print the minimum number of jumps needed to win the game.
 ## Explanation 0:
 The player must avoid c[2] and c[5]. The game can be won with a minimum of 4 jumps:
 
+
 ![o](Assets/jump1.png)
 
 ## Sample Input 1
@@ -45,6 +46,8 @@ The player must avoid c[2] and c[5]. The game can be won with a minimum of 4 jum
 
 ## Explanation 1:
 The only thundercloud to avoid is **c[4]** . The game can be won in **3** jumps:
+
+
 ![o](Assets/jump2.png)
 
 
