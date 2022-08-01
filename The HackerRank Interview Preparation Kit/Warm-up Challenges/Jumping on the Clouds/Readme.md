@@ -21,7 +21,7 @@ The first line contains an integer ***n*** , the total number of clouds. The sec
 
 ## Constraints
 * $2\leq n\leq 100$
-* $c[i]\in  \left \{ 0,1 \right \}$
+* $c[i]\in$  {0, 1}
 * $c[0]= c[n-1]= 0$
 
 ## Output Format
