@@ -51,26 +51,7 @@ The only thundercloud to avoid is **c[4]** . The game can be won in **3** jumps:
 ![o](Assets/jump2.png)
 
 
-## Solution
-
-[UML](Assets/Jumping%20on%20the%20Clouds.pdf)
-
-``` java script
- let result = 0;
-    let currentCloud = 0 ;
-    const final = c.length-1;
-        do{  
-            if (c[currentCloud + 2] === 0 ) {
-                currentCloud += 2;
-            } else {
-                currentCloud += 1;
-            }
-            result += 1;
-        } while (currentCloud < final);
-        
-    return result
-```
-
+c
 
 
 
