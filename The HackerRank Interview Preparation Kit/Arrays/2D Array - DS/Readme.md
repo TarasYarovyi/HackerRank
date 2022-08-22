@@ -103,6 +103,7 @@ The hourglass with the maximum sum (***19***) is:
 
     
 ## Solution
+[UML](Assets/2D%20Array%20-%20DS.jpg)
 
 ``` javascript
 // Set the lowest possible value of hourglass
