@@ -52,10 +52,10 @@ The second line contains n space-separated integers ***arr[i]*** .
 
 ## Explanation 0
 
-Given array $arr: [4,3,1,2]$ <br/>
-After swapping $(0,2)$ we get $arr: [ 1,3,4,2]$ <br/>
-After swapping $(1,2)$ we get $arr: [ 1,4,3,2]$ <br/>
-After swapping $(1,3)$ we get $arr: [ 1,2,3,4]$ <br/>
+Given array $arr:$ [$4,3,1,2$] <br/>
+After swapping ($0,2$) we get $arr:$ [$1,3,4,2$] <br/>
+After swapping ($1,2$) we get $arr:$ [$1,4,3,2$] <br/>
+After swapping ($1,3$) we get $arr:$ [$1,2,3,4$] <br/>
 So, we need a minimum of $3$  swaps to sort the array in ascending order.
 
 ## Sample Input 1
