@@ -52,11 +52,11 @@ The second line contains n space-separated integers ***arr[i]*** .
 
 ## Explanation 0
 
-Given array $arr:$ [$4,3,1,2$] <br/>
-After swapping ($0,2$) we get $arr:$ [$1,3,4,2$] <br/>
-After swapping ($1,2$) we get $arr:$ [$1,4,3,2$] <br/>
-After swapping ($1,3$) we get $arr:$ [$1,2,3,4$] <br/>
-So, we need a minimum of $3$  swaps to sort the array in ascending order.
+Given array arr: [4,3,1,2] <br/>
+After swapping (0,2) we get arr: [1,3,4,2] <br/>
+After swapping (1,2) we get arr: [1,4,3,2] <br/>
+After swapping (1,3) we get arr: [1,2,3,4] <br/>
+So, we need a minimum of 3  swaps to sort the array in ascending order.
 
 ## Sample Input 1
 
@@ -68,11 +68,11 @@ So, we need a minimum of $3$  swaps to sort the array in ascending order.
 
 ## Explanation 1
 
-Given array $arr:[2,3,4,1,5]$ <br/>
-After swapping $(2,3)$ we get $arr: [2,3,1,4,5]$ <br/>
-After swapping $(0,1)$ we get $arr: [3,2,1,4,5]$ <br/>
-After swapping $(0,2)$ we get $arr: [1,2,3,4,5]$ <br/>
-So, we need a minimum of $3$  swaps to sort the array in ascending order.
+Given array arr:[2,3,4,1,5] <br/>
+After swapping (2,3) we get arr: [2,3,1,4,5] <br/>
+After swapping (0,1) we get arr: [3,2,1,4,5] <br/>
+After swapping (0,2) we get arr: [1,2,3,4,5] <br/>
+So, we need a minimum of 3  swaps to sort the array in ascending order.
 
 
 ## Sample Input 2
@@ -85,11 +85,11 @@ So, we need a minimum of $3$  swaps to sort the array in ascending order.
 
 ## Explanation 2
 
-Given array $arr:  [ 1,3,5,2,4,6,7 ]$ <br/>
-After swapping $(1,3)$ we get $arr: [1,2,5,3,4,6,7]$ <br/>
-After swapping $(2,3)$ we get $arr: [1,2,3,5,4,6,7]$ <br/>
-After swapping $(3,4)$ we get $arr: [1,2,3,4,5,6,7]$ <br/>
-So, we need a minimum of $3$  swaps to sort the array in ascending order.
+Given array arr:  [ 1,3,5,2,4,6,7 ] <br/>
+After swapping (1,3) we get arr: [1,2,5,3,4,6,7] <br/>
+After swapping (2,3) we get arr: [1,2,3,5,4,6,7] <br/>
+After swapping (3,4) we get arr: [1,2,3,4,5,6,7] <br/>
+So, we need a minimum of 3  swaps to sort the array in ascending order.
 
 ## Solution
 [UML](Assets/Minimum%20Swaps.jpg)
