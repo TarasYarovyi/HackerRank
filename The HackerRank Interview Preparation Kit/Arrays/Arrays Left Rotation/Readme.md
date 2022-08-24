@@ -46,6 +46,7 @@ When we perform d = 4 left rotations, the array undergoes the following sequence
 $[1,2,3,4,5]\rightarrow [2,3,4,5,1]\rightarrow [3,4,5,1,2]\rightarrow [4,5,1,2,3]\rightarrow [5,1,2,3,4]$
 
 ## Solution
+[UML](Assets/Arrays%20Left%20Rotation.jpg)
 
 ```javascript
 
