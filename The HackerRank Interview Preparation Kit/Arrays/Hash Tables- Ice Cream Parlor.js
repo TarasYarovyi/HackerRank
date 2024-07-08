@@ -7,7 +7,7 @@ function whatFlavors(cost, money) {
     (el1, index1) =>
       el1 +
       cost.find((el2, index2) => {
-        if (el1 + el2 === money) {
+        if (index1 !== index2 && el1 + el2 === money) {
           first = index1 + 1;
           second = index2 + 1;
           return true;
