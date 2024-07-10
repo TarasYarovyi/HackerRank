@@ -20,15 +20,22 @@
 function whatFlavors(cost, money) {
   const hash = {};
 
-  for (let i = cost.length - 1; i >= 0; i--) {
+  for (let i = 0; i < cost.length; i++) {
     hash[cost[i]] ? hash[cost[i]].push(i + 1) : (hash[cost[i]] = [i + 1]);
   }
 
   for (let i = 0; i < cost.length; i++) {
     const el = cost[i];
-    if (el !== money - el && hash[money - el]) {
-      console.log(hash[el][0], hash[money - el][0]);
-      return;
+    if (hash[money - el]) {
+      if (el === money - el) {
+        if (hash[el].length > 1) {
+          console.log(hash[el][0], hash[el][1]);
+          return;
+        }
+      } else {
+        console.log(hash[el][0], hash[money - el][0]);
+        return;
+      }
     }
   }
 }
