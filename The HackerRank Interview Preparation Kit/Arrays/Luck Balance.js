@@ -5,10 +5,12 @@ function luckBalance(k, contests) {
   const ranking = contests.sort((a, b) => {
     if (a[1] === b[1]) {
       return a[0] - b[0];
+    } else {
+      return b[1] - a[1];
     }
   });
   let toWin = ranking.filter((el) => el[1] > 0).length - k;
-
+  console.log(ranking);
   return ranking.reduce(
     (acc, curr, index) => (index < toWin ? acc - curr[0] : acc + curr[0]),
     0
