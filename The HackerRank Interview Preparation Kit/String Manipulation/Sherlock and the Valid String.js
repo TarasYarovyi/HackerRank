@@ -7,10 +7,11 @@ function isValid(s) {
     let symbol = s[i];
     obj[symbol] ? obj[symbol]++ : (obj[symbol] = 1);
   }
+  const values = Object.values(obj);
+  const max = Math.max(...values);
+  const min = Math.min(...values);
 
-  return Object.entries(obj).reduce((acc, curr) =>
-    curr[1] <= acc ? curr[1] : acc
-  );
+  return max - min <= 1 || values.filter(el === min);
 }
 
 console.log(isValid("abcdefghhgfedecba"));
