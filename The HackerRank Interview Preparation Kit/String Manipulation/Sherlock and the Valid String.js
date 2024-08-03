@@ -10,10 +10,16 @@ function isValid(s) {
   const values = Object.values(obj);
   const max = Math.max(...values);
   const min = Math.min(...values);
-
+  console.log(
+    max,
+    min,
+    values.filter((el) => el === min)
+  );
   return (
     max - min <= 1 ||
-    values.filter(el === min).length - values.filter(el === min).length <= 1
+    values.filter((el) => el === min).length -
+      values.filter((el) => el === max).length <=
+      1
   );
 }
 
