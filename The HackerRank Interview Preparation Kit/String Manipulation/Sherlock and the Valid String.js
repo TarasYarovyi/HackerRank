@@ -11,7 +11,10 @@ function isValid(s) {
   const max = Math.max(...values);
   const min = Math.min(...values);
 
-  return max - min <= 1 || values.filter(el === min);
+  return (
+    max - min <= 1 ||
+    values.filter(el === min).length - values.filter(el === min).length <= 1
+  );
 }
 
-console.log(isValid("abcdefghhgfedecba"));
+console.log(isValid("abcddefghhgfedecba"));
