@@ -2,23 +2,24 @@
 // https://www.hackerrank.com/challenges/sherlock-and-valid-string/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=strings
 
 function isValid(s) {
-  const obj = {};
+  const cache = {};
   for (let i = 0; i < s.length; i++) {
-    let symbol = s[i];
-    obj[symbol] ? obj[symbol]++ : (obj[symbol] = 1);
+    let letter = s[i];
+    cache[letter] ? cache[letter]++ : (cache[letter] = 1);
   }
-  const values = Object.values(obj);
+  const values = Object.values(cache);
   const set = new Set(values);
-  const max = Math.max(...values);
-  const min = Math.min(...values);
+  const max = Math.max(...set);
+  const min = Math.min(...set);
+  const qty = function (value) {
+    return values.filter((el) => el === value).length;
+  };
 
-  console.log(values, max, min);
-
-  if (max === min) {
+  if (set.size === 1) {
     return "YES";
-  } else if (max - min <= 1 && values.filter((el) => el === max).length <= 1) {
+  } else if (max - min <= 1 && qty(max) <= 1) {
     return "YES";
-  } else if (set.size < 3 && values.filter((el) => el === min).length === 1) {
+  } else if (set.size < 3 && qty(min) === 1) {
     return "YES";
   } else {
     return "NO";
