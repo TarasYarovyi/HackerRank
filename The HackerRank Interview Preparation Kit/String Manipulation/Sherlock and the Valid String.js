@@ -11,16 +11,21 @@ function isValid(s) {
   const max = Math.max(...values);
   const min = Math.min(...values);
   console.log(
+    values,
     max,
     min,
-    values.filter((el) => el === min)
+    values.filter((el) => el === min),
+    values.filter((el) => el === max)
   );
-  return (
-    max - min <= 1 ||
-    values.filter((el) => el === min).length -
-      values.filter((el) => el === max).length <=
-      1
-  );
+  if (max === min) {
+    return "YES";
+  } else if (max - min <= 1 && values.filter((el) => el === max).length <= 1) {
+    return "YES";
+  } else if (max - min <= 1 && values.filter((el) => el === min).length === 1) {
+    return "YES";
+  } else {
+    return "NO";
+  }
 }
 
-console.log(isValid("abcddefghhgfedecba"));
+console.log(isValid("xxxaabbccrry"));
