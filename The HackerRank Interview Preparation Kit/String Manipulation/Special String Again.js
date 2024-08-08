@@ -3,13 +3,14 @@
 
 function substrCount(s) {
   let result = [];
-  const regex = /(.+).\1/g;
+  const regex = /(.+).\1/;
   for (let i = 0; i < s.length; i++) {
-    const exec = regex.exec(s);
-    result.push(exec);
-    regex.lastIndex = i;
+    // const exec = regex.exec(s);
+    // result.push(exec);
+    // regex.lastIndex = i;
+    const arr = s.substring(i).match(regex) || [];
+    console.log(arr[0]);
   }
-  return result;
+  // return result;
 }
-
 console.log(substrCount("abcbaba"));
