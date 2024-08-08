@@ -5,9 +5,9 @@ function substrCount(s) {
   let result = [];
   const regex = /(.+).\1/g;
   for (let i = 0; i < s.length; i++) {
-    result.push(regex.exec(s));
-    i = regex.lastIndex + 1;
-    regex.lastIndex--;
+    const exec = regex.exec(s);
+    result.push(exec);
+    regex.lastIndex = i;
   }
   return result;
 }
