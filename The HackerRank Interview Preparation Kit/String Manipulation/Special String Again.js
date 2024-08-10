@@ -12,9 +12,17 @@ function substrCount(s) {
     }
     result += (repeat * (repeat + 1)) / 2;
 
-    const arr = s.substring(i).match(/(.+).\1/) || [];
-    if (arr.index === 0) result++;
+    let count = 1;
+    while (
+      i - count >= 0 &&
+      i + count < s.length &&
+      s.charAt(i + count) === s.charAt(i - 1) &&
+      s.charAt(i - count) === s.charAt(i - 1)
+    ) {
+      result++;
+      count++;
+    }
   }
   return result;
 }
-console.log(substrCount("aaaa"));
+console.log(substrCount("asasd"));
