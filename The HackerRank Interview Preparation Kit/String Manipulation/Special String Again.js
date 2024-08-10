@@ -3,16 +3,17 @@
 
 function substrCount(s) {
   let result = s.length;
-  const regex = /(.?).\1/;
+
   for (let i = 0; i < s.length; i++) {
-    // const exec = regex.exec(s);
-    // result.push(exec);
-    // regex.lastIndex = i;
-    const arr = s.substring(i).match(regex) || [];
-    if (arr.index === 0) {
-      result++;
+    let repeat = 0;
+    while (i + 1 < s.length && s.charAt(i) === s.charAt(i + 1)) {
+      repeat++;
+      i++;
     }
-    console.log(arr.index);
+    result += (repeat * (repeat + 1)) / 2;
+
+    const arr = s.substring(i).match(/(.+).\1/) || [];
+    if (arr.index === 0) result++;
   }
   return result;
 }
