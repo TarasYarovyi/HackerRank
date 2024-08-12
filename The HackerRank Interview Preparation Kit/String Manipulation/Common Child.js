@@ -1,3 +1,19 @@
-Common Child
-https://www.hackerrank.com/challenges/common-child/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=strings
+// Common Child
+// https://www.hackerrank.com/challenges/common-child/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=strings
 
+function commonChild(s1, s2) {
+  // Write your code here
+  let result = "";
+  for (let i = 0; i < s1.length; i++) {
+    for (let j = 0; j < s2.length; j++) {
+      if (s1.charAt(i) === s2.charAt(j)) {
+        result += s1.charAt(i);
+        j = i;
+        break;
+      }
+    }
+  }
+  return result;
+}
+
+console.log(commonChild("SHINCHAN", "NOHARAAA"));
