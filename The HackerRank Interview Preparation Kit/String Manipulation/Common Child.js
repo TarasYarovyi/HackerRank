@@ -5,12 +5,15 @@ function commonChild(s1, s2) {
   // Write your code here
   let result = "";
   for (let i = 0; i < s1.length; i++) {
-    for (let j = 0; j < s2.length; j++) {
+    let j = 0;
+    while (j < s2.length) {
       if (s1.charAt(i) === s2.charAt(j)) {
         result += s1.charAt(i);
         j = i;
+
         break;
       }
+      j++;
     }
   }
   return result;
