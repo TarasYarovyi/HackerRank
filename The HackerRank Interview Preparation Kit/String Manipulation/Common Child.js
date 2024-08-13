@@ -20,3 +20,16 @@ function commonChild(s1, s2) {
 }
 
 console.log(commonChild("SHINCHAN", "NOHARAAA"));
+("H N H A N");
+("N H A A A A");
+
+("HARRY");
+("SALLY");
+("A Y");
+("A Y");
+
+("ABCDEF");
+("FBDAMN");
+
+("A B D F");
+("F B D A ");
