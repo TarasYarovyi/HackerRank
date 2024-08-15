@@ -10,25 +10,26 @@ function commonChild(s1, s2) {
         str1 = str1.replaceAll(regexp, "");
       }
     }
+
     return str1;
   }
   s1 = removeUniq(s1, s2);
   s2 = removeUniq(s2, s1);
+
+  for (let i = 0; i < s1.length; i++) {
+    let count = 0;
+    for (let j = 0; j < s2.length; j++) {
+      while (s1.charAt(i) === s2.charAt(j)) {
+        count++;
+        i++;
+        j++;
+        console.log(s1.charAt(i), s2.charAt(j));
+      }
+      console.log(count);
+    }
+  }
+
   console.log(s1, s2);
-
-  // for (let i = 0; i < s1.length; i++) {
-  //   let j = 0;
-  //   while (j < s2.length) {
-  //     if (s1.charAt(i) === s2.charAt(j)) {
-  //       result += s1.charAt(i);
-  //       j = i;
-
-  //       break;
-  //     }
-  //     j++;
-  //   }
-  // }
-  // return result;
 }
 
 console.log(commonChild("SHINCHAN", "NOHARAAA"));
