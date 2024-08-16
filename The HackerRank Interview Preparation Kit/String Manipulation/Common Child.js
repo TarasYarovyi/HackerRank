@@ -15,24 +15,26 @@ function commonChild(s1, s2) {
   }
   s1 = removeUniq(s1, s2);
   s2 = removeUniq(s2, s1);
-
+  let result = 0;
   for (let i = 0; i < s1.length; i++) {
     let count = 0;
     for (let j = 0; j < s2.length; j++) {
-      while (s1.charAt(i) === s2.charAt(j)) {
+      k = i;
+      while (s1.charAt(k) === s2.charAt(j)) {
         count++;
-        i++;
+        k++;
         j++;
-        console.log(s1.charAt(i), s2.charAt(j));
       }
-      console.log(count);
+      if (count > result) {
+        result = count;
+      }
     }
   }
 
-  console.log(s1, s2);
+  return result;
 }
 
-console.log(commonChild("SHINCHAN", "NOHARAAA"));
+console.log(commonChild("HARRY", "SALLY"));
 ("H N H A N");
 ("N H A A A A");
 
