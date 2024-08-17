@@ -3,38 +3,24 @@
 
 function commonChild(s1, s2) {
   // Write your code here
-  function removeUniq(str1, str2) {
-    for (let i = 0; i < str1.length; i++) {
-      const regexp = new RegExp(str1.charAt(i), "g");
-      if (!regexp.test(str2)) {
-        str1 = str1.replaceAll(regexp, "");
-      }
-    }
-
-    return str1;
+  const matrix = [];
+  for (let i = 0; i < s2.length + 1; i++) {
+    matrix.push(new Array(s1.length + 1).fill(0));
   }
-  s1 = removeUniq(s1, s2);
-  s2 = removeUniq(s2, s1);
-  let result = 0;
-  for (let i = 0; i < s1.length; i++) {
-    let count = 0;
-    for (let j = 0; j < s2.length; j++) {
-      k = i;
-      while (s1.charAt(k) === s2.charAt(j)) {
-        count++;
-        k++;
-        j++;
-      }
-      if (count > result) {
-        result = count;
+  for (let i = 1; i < s1.length + 1; i++) {
+    for (let j = 1; j < s2.length + 1; j++) {
+      if (s1[i - 1] === s2[j - 1]) {
+        matrix[i][j] = matrix[i - 1][j - 1] + 1;
+      } else {
+        matrix[i][j] = Math.max(matrix[i - 1][j], matrix[i][j - 1]);
       }
     }
   }
 
-  return result;
+  return matrix;
 }
 
-console.log(commonChild("HARRY", "SALLY"));
+console.log(commonChild("abdef", "acdf"));
 ("H N H A N");
 ("N H A A A A");
 
