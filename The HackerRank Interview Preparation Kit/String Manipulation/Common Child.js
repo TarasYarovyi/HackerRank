@@ -3,10 +3,9 @@
 
 function commonChild(s1, s2) {
   // Write your code here
-  const matrix = [];
-  for (let i = 0; i < s2.length + 1; i++) {
-    matrix.push(new Array(s1.length + 1).fill(0));
-  }
+  const matrix = new Array(s1.length + 1).fill(
+    new Array(s2.length + 1).fill(0)
+  );
   for (let i = 1; i < s1.length + 1; i++) {
     for (let j = 1; j < s2.length + 1; j++) {
       if (s1[i - 1] === s2[j - 1]) {
@@ -20,7 +19,7 @@ function commonChild(s1, s2) {
   return matrix;
 }
 
-console.log(commonChild("abdef", "acdf"));
+console.log(commonChild("acdf", "abdef"));
 ("H N H A N");
 ("N H A A A A");
 
