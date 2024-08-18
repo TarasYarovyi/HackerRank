@@ -6,15 +6,21 @@ function commonChild(s1, s2) {
   const matrix = new Array(s1.length + 1).fill(
     new Array(s2.length + 1).fill(0)
   );
-  for (let i = 1; i < s1.length + 1; i++) {
-    for (let j = 1; j < s2.length + 1; j++) {
-      if (s1[i - 1] === s2[j - 1]) {
-        matrix[i][j] = matrix[i - 1][j - 1] + 1;
-      } else {
-        matrix[i][j] = Math.max(matrix[i - 1][j], matrix[i][j - 1]);
-      }
+
+  for (let i = 1; i <= s1.length; i++) {
+    for (let j = 1; j <= s2.length; j++) {
+      matrix[i][j]++;
     }
   }
+  // for (let i = 1; i < s1.length + 1; i++) {
+  //   for (let j = 1; j < s2.length + 1; j++) {
+  //     if (s1[i - 1] === s2[j - 1]) {
+  //       matrix[i][j] = matrix[i - 1][j - 1] + 1;
+  //     } else {
+  //       matrix[i][j] = Math.max(matrix[i - 1][j], matrix[i][j - 1]);
+  //     }
+  //   }
+  // }
 
   return matrix;
 }
